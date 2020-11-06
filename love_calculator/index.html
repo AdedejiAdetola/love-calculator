@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Love Calculator</h1>
+  <label for="">Your name:</label>
+  <input type="text">
+  <br><br>
+  <label for="">Crush's name:</label>
+  <input type="text">
+  <br><br>
+  <button type="button" onclick="random()">calculateLove%</button>
+  <p>Your result: <span id="result"></span></p>
+  <br>
+  <h4>A little secret for love to work between you two</h4>
+  <button type="button" onclick = "note()">Click here!</button>
+  <p id="secret"></p>
+</body>
+<script>
+  function random() {
+    var calc = Math.floor(Math.random() * 31) +70;
+    document.getElementById("result").innerHTML ="Love percent is " + calc +"%. The love between you two is very rare!"
+  }
+
+  function note() {
+    document.getElementById("secret").innerHTML = "Sorry to break it to you but, your love percent was programmed... You have to find another way.. Goodluck!"
+  }
+</script>
+</html>
